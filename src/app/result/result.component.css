@@ -1,0 +1,22 @@
+table{
+    background-color: turquoise;
+    margin-left: 22%;
+    margin-right: 22%;
+    
+}
+.tablebody{
+    text-align: center;
+
+    
+}
+.basic{ 
+    text-align: center;
+}
+.data{
+    width: 200px;
+}
+pre{
+    background-color: inherit;
+}
+
+

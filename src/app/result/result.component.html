@@ -1,0 +1,25 @@
+<div class="basic">
+<div>Basic monthly payment is: {{monthlyPayment}} $</div>
+<div>Total monthly payment (HOA,tax,additional payment) is: {{totalMonthly}} $</div>
+<div>Total interest paid is: {{totalInterest}} $</div>
+</div>
+<hr>
+
+<h1 style="text-align:center;font-weight: bold;">Monthly Breakdown</h1>
+<hr>
+<div class="table-container">
+<table class="table is-bordered is-fullwidth ">
+    <thead><pre>       Month                   Interest                  Principal                  Balance</pre></thead>
+    
+   <div class="tablebody">
+     <tr  *ngFor="let payment of mortgageData;let i=index">
+      <div *ngIf="i!=0">
+        <td class="data">{{i}}</td>
+        <td class="data">{{ payment.interest+ '$'}} </td>
+        <td class="data">{{ payment.principal+ '$'}}</td>
+        <td class="data">{{ payment.balance+ '$'}}</td>
+      </div>
+      </tr>
+    </div>
+</table>
+</div>

@@ -1,0 +1,32 @@
+<h1 style="text-align: center; font-weight: bold;">MITech Mortgage Calculator</h1>
+<hr>
+    <form [formGroup]="formValidation" class="ui form" style="text-align:center">
+        <div class="field">
+            <label>Enter Home Price:</label><br>
+            <input type="number" formControlName="HomePrice" placeholder="0-any">
+        </div>
+        <div class="field">
+            <label>Enter Deposit Amount:</label><br>
+            <input type="number" formControlName="Deposit" placeholder="0-any">
+        </div>
+        <div class="field">
+            <label>Enter Yearly Interest Rate:</label><br>
+            <input type="number"  formControlName="Interest" placeholder="0-100">
+        </div>
+        <div class="field">
+            <label>Enter Number of years:</label><br>
+            <input type="number" formControlName="Years" placeholder="0-30">
+        </div>
+        <div class="field">
+            <label>Enter Monthly HOA:</label><br>
+            <input type="number" formControlName="HOA" placeholder="0-any">
+        </div>
+        <div class="field">
+            <label>Enter Additional Monthly Principal:</label><br>
+            <input type="number" formControlName="Additional" placeholder="0-any">
+        </div>
+        <hr>
+        <!-- <button class="button" (click)="getLoanData()" >Calculate</button>  -->
+        
+    </form>
+    <app-result [loanData]="getLoanData()"></app-result>
